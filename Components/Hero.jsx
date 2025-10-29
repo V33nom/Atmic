@@ -44,7 +44,7 @@ export default function Hero() {
           }}>
             UNLOCK<br />ANCIENT<br />WISDOM.
           </h1>
-          <div style={{ fontSize: "1.15rem", color: "#222", marginBottom: 36 }}>
+          <div style={{ fontSize: "1.15rem", color: "gray", marginBottom: 36 }}>
             An AI-powered journey into the heart of the Rig Veda. Explore, question,<br />
             and listen to the world’s oldest scriptures like never before.
           </div>
