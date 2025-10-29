@@ -1,0 +1,191 @@
+:root{
+--paper:#f7e9c9; 
+--paper-deep:#edd8ae; 
+--ink:#2a2114;
+--ink-soft:#52432e; 
+--ink-muted:#7b6a4f; 
+--panel:#f3e0bb; 
+--panel-shadow:rgba(82, 54, 19, 0.25);
+--amber:#d79a27; 
+--amber-deep:#b67e1f;
+--chip:#6f5130;}
+
+/* Paper background with vignette */
+.narration-page{
+font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+min-height:100vh; width:100%; max-width:100vw;
+margin:0 auto; padding:24px 14px; box-sizing:border-box;
+display:flex; flex-direction:column; align-items:center; justify-content:flex-start; overflow-x:hidden;
+color:var(--ink);
+background:
+radial-gradient(1100px 700px at 50% -10%, rgba(94,58,13,0.08), transparent 60%),
+radial-gradient(900px 600px at -10% 110%, rgba(94,58,13,0.06), transparent 70%),
+radial-gradient(900px 600px at 110% 110%, rgba(94,58,13,0.06), transparent 70%),
+var(--paper);
+}
+
+/* Title header panel */
+.header{
+width:min(900px,96vw);
+margin:0 auto 18px auto;
+text-align:center;
+color:var(--ink);
+background: linear-gradient(180deg, #f2dfbd 0%, #e9cfa1 100%);
+border:1.6px solid #b08645;
+border-radius:14px;
+padding:16px 18px;
+box-shadow:
+0 10px 24px var(--panel-shadow),
+inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.header h1{
+margin:0 0 6px 0;
+font-size:2rem;
+letter-spacing:.25px;
+}
+.header p{
+margin:0;
+font-size:0.98rem;
+color:var(--ink-muted);
+}
+
+/* Dropdown chip */
+.selector{
+text-align:center;
+margin:10px 0 14px 0;
+}
+.selector select{
+padding:10px 16px;
+font-size:0.98rem;
+border-radius:999px;
+border:1.4px solid #caa468;
+background: #f7e3bf;
+color:var(--ink);
+min-width:260px;
+outline:none;
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.selector select:focus{
+box-shadow: 0 0 0 3px rgba(215,154,39,0.25);
+border-color:#b6873e;
+}
+
+/* Rate/Pitch chips */
+.controls{
+display:flex; justify-content:center; gap:12px;
+margin-bottom:10px; flex-wrap:wrap; min-width:0;
+}
+.controls label{
+display:flex; align-items:center; gap:10px;
+font-size:0.92rem; color:var(--ink-soft);
+background:#f7e3c2;
+border:1.4px solid #d2b27e;
+border-radius:14px; padding:8px 12px;
+}
+
+/* Amber rounded buttons row (Playing, Pause, etc.) */
+.audio-btn-container{
+text-align:center; margin-bottom:18px;
+}
+.audio-btn{
+padding:10px 16px; font-size:0.98rem; border-radius:999px; border:1.5px solid #b6873e;
+background: linear-gradient(180deg, #f0c262 0%, #d79a27 100%);
+color:#3b2a13; cursor:pointer; transition: filter .2s, transform .08s;
+margin:5px; box-shadow:
+0 6px 14px rgba(87,61,18,0.18),
+inset 0 1px 0 rgba(255,255,255,0.65);
+}
+.audio-btn:hover{ filter:brightness(1.03); }
+.audio-btn:active{ transform: translateY(1px); }
+.audio-btn.playing{
+background: linear-gradient(180deg, #d69a38 0%, #b67e1f 100%);
+color:#fff6df;
+}
+
+/* Main content card */
+.hymn-card{
+max-width:900px; width:96vw; margin:0 auto;
+background: linear-gradient(180deg, #f7e6c6 0%, #f0d8ae 100%);
+border-radius:16px; padding:20px;
+border:1.6px solid #caa468;
+box-shadow:
+0 12px 28px var(--panel-shadow),
+inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Top metadata row */
+.metadata{
+margin-bottom:12px; color:var(--ink-soft);
+font-weight:700; font-size:1rem;
+}
+
+/* Devanagari verse */
+.sanskrit{
+font-size:1.5rem;
+text-align:center; margin:12px 0 10px 0;
+line-height:2.1rem;
+font-family:'Noto Sans Devanagari', serif;
+color:#2b2215;
+text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+}
+.highlighted-line{
+background:#f4d193;
+border:1px solid #d9b370;
+border-radius:6px;
+padding:2px 6px;
+}
+
+/* Translation & life lesson */
+.translation{
+font-size:1.02rem; text-align:center; color:var(--ink-soft);
+margin-bottom:12px;
+}
+.life-lesson h2{
+color:#604826; margin-bottom:8px; font-size:1.1rem;
+}
+.life-lesson p{
+color:#4e3d26; line-height:1.55rem;
+}
+
+/* ===============================
+Responsive
+=============================== */
+
+/* Large tablets / small desktops */
+@media (max-width: 850px){
+.narration-page{ padding:20px 12px; }
+.hymn-card{ width:98vw; padding:18px; }
+.selector select{ min-width:50vw; }
+}
+
+/* Tablets */
+@media (max-width: 700px){
+.narration-page{ padding:16px 10px; }
+.header h1{ font-size:1.8rem; }
+.header p{ font-size:0.96rem; }
+.hymn-card{ width:99vw; padding:14px; }
+.sanskrit{ font-size:1.28rem; line-height:1.85rem; }
+.translation{ font-size:0.98rem; }
+.selector select{ min-width:70vw; font-size:0.97rem; }
+}
+
+/* Phones */
+@media (max-width: 600px){
+.narration-page{ padding:14px 8px; }
+.header h1{ font-size:1.45rem; }
+.header p{ font-size:0.92rem; }
+.selector select{ min-width:90vw; font-size:0.95rem; }
+.controls{ flex-direction:column; align-items:center; gap:12px; }
+.hymn-card{ padding:10px; width:100vw; }
+.sanskrit{ font-size:1.1rem; line-height:1.4rem; margin-bottom:8px; }
+.translation{ font-size:0.9rem; }
+}
+
+/* Small phones */
+@media (max-width: 400px){
+.narration-page{ padding:10px 6px; }
+.header h1{ font-size:1.18rem; }
+.hymn-card{ padding:8px; }
+.sanskrit{ font-size:0.98rem; line-height:1.2rem; margin-bottom:6px; }
+.translation{ font-size:0.86rem; }
+}

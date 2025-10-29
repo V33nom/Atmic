@@ -1,0 +1,231 @@
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 1rem;
+  /* Parchment background with soft vignette */
+  background:
+    radial-gradient(1200px 800px at 50% -10%, rgba(94,58,13,0.06), transparent 55%),
+    radial-gradient(900px 700px at -10% 110%, rgba(94,58,13,0.05), transparent 65%),
+    radial-gradient(900px 700px at 110% 110%, rgba(94,58,13,0.05), transparent 65%),
+    linear-gradient(135deg, #f6e7c4 0%, #edd19c 100%);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rv-main {
+  width: 100%;
+}
+
+/* === HEADER === */
+.quiz-header {
+  text-align: center;
+  padding: 18px 18px; /* tighter like screenshot */
+ background: linear-gradient(180deg, #b77a3a 0%, #7a4b1e 100%);
+
+
+  color: #f1e1be;
+  border-bottom: 0;
+  border: 1.6px solid #c89b58; /* gold edge */
+  box-shadow: 0 10px 22px rgba(82,54,19,0.28), inset 0 1px 0 rgba(255,255,255,0.35);
+  border-radius: 14px;
+  margin-bottom: 1.4rem;
+  animation: slideDown 1s ease-out;
+  width: min(880px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quiz-header h1 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.9rem; /* matches screenshot scale */
+  margin-bottom: 0.4rem;
+}
+
+.quiz-header p {
+  font-style: italic;
+  font-size: 0.96rem;
+  color: #f0e4c7;
+  opacity: 0.95;
+}
+
+/* === MODE BUTTONS (three chips under banner) === */
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 14px 0;
+  flex-wrap: wrap;
+}
+
+.mode-buttons button {
+  padding: 8px 14px;
+  font-size: 0.98rem;
+  font-family: "Cinzel Decorative", serif;
+  color: #3b2a13;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /* amber chip default (Quiz active look) */
+  background: linear-gradient(180deg, #f0c262 0%, #d79a27 100%);
+  border: 1.3px solid #b6873e;
+  box-shadow: 0 6px 14px rgba(87,61,18,0.18), inset 0 1px 0 rgba(255,255,255,0.45);
+}
+
+.mode-buttons button:hover {
+  filter: brightness(1.03);
+  transform: none; /* screenshot shows no grow */
+}
+
+.mode-buttons button.active {
+  background: linear-gradient(180deg, #f0c262 0%, #d79a27 100%);
+  color: #3b2a13;
+  font-weight: 700;
+  border-color: #b6873e;
+}
+
+/* Make Unscramble/Daily look like darker brown chips */
+.mode-buttons button:nth-child(2),
+.mode-buttons button:nth-child(3) {
+  background: linear-gradient(180deg, #6f5130 0%, #5b4128 100%);
+  color: #f4e8cf;
+  border-color: #8f6a3b;
+}
+
+/* === QUIZ CONTAINER === */
+.quiz-container {
+  background: linear-gradient(180deg, #f7e6c6 0%, #f0d8ae 100%);
+  padding: 1.4rem 1.6rem;
+  border-radius: 16px;
+  border: 1.6px solid #caa468;
+  box-shadow: 0 12px 28px rgba(82,54,19,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+  width: 100%;
+  max-width: 880px;
+  animation: fadeInUp 0.8s ease-out;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === VERSE === */
+.sanskrit-verse {
+  font-family: "Noto Sans Devanagari", serif;
+  font-size: 1.32rem;
+  text-align: center;
+  color: #2b2215; /* ink-like */
+  margin: 12px 0 16px;
+  animation: fadeIn 1s ease;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* === OPTION BUTTONS === */
+.option-button {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin: 0.6rem 0;
+  background: #edc573; /* amber bar */
+  border: 1.8px solid #6b4a2d; /* brown edge */
+  border-radius: 10px;
+  font-size: 1.06rem;
+  font-family: "Cinzel Decorative", serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.option-button:hover {
+  background: #f0c86a;
+  transform: translateY(-2px);
+}
+
+.option-button.correct {
+  background: #2a9d8f;
+  color: white;
+  animation: pulse 0.6s ease-in-out;
+}
+
+.option-button.wrong {
+  background: #d1644a;
+  color: white;
+  animation: shake 0.4s ease-in-out;
+}
+
+/* === UNSCRAMBLE BOX === */
+.unscramble-box {
+  background: #fbebc9;
+  border: 2px dashed #a1723e;
+  padding: 1rem;
+  border-radius: 15px;
+  min-height: 90px;
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  animation: fadeInUp 1s ease;
+}
+
+.word-tile {
+  background: #edc573;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  cursor: grab;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.word-tile:hover {
+  background: #f0c86a;
+  transform: scale(1.05);
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+  .quiz-header h1 { font-size: 1.8rem; }
+  .quiz-container { padding: 1.25rem 1.2rem; }
+}
+
+@media (max-width: 700px) {
+  .quiz-header { padding: 1.1rem 0.8rem; }
+  .mode-buttons { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .option-button { font-size: 1rem; }
+  .sanskrit-verse { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  .quiz-header h1 { font-size: 1.55rem; }
+  .quiz-container { padding: 1rem; }
+  .mode-buttons button { padding: 0.65rem 0.95rem; font-size: 0.95rem; }
+  .word-tile { padding: 0.4rem 0.8rem; font-size: 0.95rem; }
+}
