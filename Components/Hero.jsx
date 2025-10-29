@@ -73,10 +73,7 @@ export default function Hero() {
           }}>
             <svg width="30" height="30" fill="#ffba46"><rect width="100%" height="100%" rx="7"></rect></svg>
           </span>
-          <div>
-            <div style={{ fontWeight: 700, fontSize: '1.5rem', color: '#45355f' }}>19+</div>
-            <div style={{ fontSize: '1.0rem', color: '#826eac' }}>Verses Indexed</div>
-          </div>
+          
         </div>
       </div>
     </section>
