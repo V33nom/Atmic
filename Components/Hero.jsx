@@ -50,31 +50,7 @@ export default function Hero() {
           </div>
         </div>
         {/* Verses Indexed Card */}
-        <div style={{
-          position: 'absolute',
-          right: 40,
-          bottom: 36,
-          background: '#fff',
-          borderRadius: '16px',
-          boxShadow: '0 1px 16px rgba(0,0,0,.07)',
-          padding: '20px 34px 20px 20px',
-          display: 'flex',
-          alignItems: 'center',
-          minWidth: '160px',
-          zIndex: 3
-        }}>
-          <span style={{
-            background: '#fff3dd',
-            borderRadius: '8px',
-            padding: '9px',
-            display: 'inline-flex',
-            alignItems: 'center',
-            marginRight: '18px'
-          }}>
-            <svg width="30" height="30" fill="#ffba46"><rect width="100%" height="100%" rx="7"></rect></svg>
-          </span>
-          
-        </div>
+        
       </div>
     </section>
   );
