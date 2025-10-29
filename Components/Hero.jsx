@@ -11,7 +11,7 @@ export default function Hero() {
           borderRadius: '24px',
           background: `#5b4128 url(${heroImg}) center 22% / cover no-repeat`,
           boxShadow: '0 4px 34px 0 rgba(32,28,60,.07)',
-          padding: '40px 0 0 0',
+          padding: '0 0 0 0',
           minHeight: '480px',
           position: 'relative',
           overflow: 'hidden',
