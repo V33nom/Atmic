@@ -1,10 +1,10 @@
 import agniimg from "../assets/agni.jpg"
-import indra from "../assets/indra.png"
-import saraswati from "../assets/saraswati.png"
+import indra from "../assets/Indra.png"
+import saraswati from "../assets/Saraswati.png"
 import varuna from "../assets/varuna.png"
 import mitra from "../assets/mitra.png"
 import mitvar from "../assets/mitra-varuna.png"
-import vayu from "../assets/vayu.png"
+import vayu from "../assets/Vayu.png"
 import vata from "../assets/Vāta.png"
 import maruts from "../assets/maruts.png"
 import Rudra from "../assets/Rudra.png"
@@ -38,7 +38,7 @@ import Dakṣa from "../deities/Dakṣa.png"
 import Aṃśa from "../deities/Aṃśa.png"
 import Prajāpati from "../deities/Prajāpati (RV X).png"
 import Hiraṇyagarbha from "../deities/Hiraṇyagarbha.png"
-import indra_agni from "../deities/indra-agni.png"
+import indra_agni from "../deities/Indra-Agni.png"
 import indra_vayu from "../deities/Indra-Vāyu.png"
 import visvakarman from "../deities/Viśvakarman.png"
 
@@ -87,3 +87,4 @@ export const deityCards = [
   { id: 43, name: "indra & vayu", image: indra_vayu , wisdom: "may the luckbe inyour favour", fact: "indra-vayu duo" },
   { id: 44, name: "visvakarman", image: visvakarman , wisdom: "creation is permanent", fact: "sculptor of gods & weapons" }
 ];
+
