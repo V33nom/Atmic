@@ -31,8 +31,8 @@ export default function AboutusSlider() {
   return (
     <section className="aboutus-slider-section"
       style={{
-        minHeight: "100vh",
-        width: "100vw",
+        minHeight: "60vh",
+        width: "80vw",
         background: "linear-gradient(120deg,#f9efcb,#e1d1a5 90%)",
         display: "flex",
         flexDirection: "column",
@@ -185,3 +185,4 @@ export default function AboutusSlider() {
     </section>
   );
 }
+
