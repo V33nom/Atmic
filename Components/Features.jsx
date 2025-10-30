@@ -20,8 +20,9 @@ export default function Features() {
               Engage in a dialogue with ancient wisdom. Ask questions and receive AI-powered insights from the Rig Veda.
             </div>
           </div>
-          <div className="rv-feature-arrow">&#8594;</div>
-        </div>
+        <Link to="/chatbot"><div className="rv-feature-arrow">&#8594;</div>
+        </div></Link>
+          
         <div className="rv-feature-card highlighted">
           <div className="rv-feature-icon"></div>
           <div>
@@ -31,8 +32,9 @@ export default function Features() {
               Hear hymns narrated, explained, and interpreted with life lessons by our AI sage.
             </div>
           </div>
-          <div className="rv-feature-arrow">&#8594;</div>
-        </div>
+      <Link to="/Narration"><div className="rv-feature-arrow">&#8594;</div>
+        </div></Link>
+          
         <div className="rv-feature-card">
           <div className="rv-feature-icon"></div>
           <div>
